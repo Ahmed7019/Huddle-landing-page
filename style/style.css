@@ -19,15 +19,15 @@
 
 @font-face {
   font-family: speciman;
-  src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+  src: url(../fonts/OpenSans-VariableFont_wdth\wght.ttf);
 }
 body {
   margin: 0;
-  padding: 2rem ;
+  padding: 2rem;
   background-image: url(../images/bg-mobile.svg);
   background-repeat: no-repeat;
   background-size: 100%;
-  font-family: 'speciman';
+  font-family: "speciman";
   background-color: var(--Violet);
 }
 /* Design mobile first */
@@ -46,45 +46,46 @@ main {
   flex-direction: column;
 }
 
-main :nth-child(1)  img {
+main :nth-child(1) img {
   width: 100%;
   margin: 1.5rem 0;
 }
 
 main:nth-child(2) {
   color: white;
-  margin: .5rem 0;
+  /* margin: 0.5rem 0; */
   text-align: center;
   line-break: auto;
 }
 
 main:nth-child(2) p {
   font-size: 15px;
-  opacity: .8;
+  opacity: 0.8;
   font-weight: 400;
   line-height: 1.5rem;
 }
-
-
+h1,p {
+  font-family: "poppins";
+}
 h1 {
-  font-family: 'poppins';
   font-weight: 500;
   text-transform: capitalize;
-  margin-bottom: 1rem ;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
 }
 
-input[type=button] {
-
+input[type="button"] {
   border: none;
   background-color: white;
   text-align: center;
   color: var(--Violet);
+  font-weight: bold;
   padding: 1rem;
-  margin-top: 1.5rem ;
+  margin-top: 1.5rem;
   width: 70%;
   border-radius: 2rem;
   cursor: pointer;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
 ul {
@@ -97,7 +98,7 @@ ul li {
   display: inline-block;
 }
 
-ul li a i{
+ul li a i {
   display: block;
   color: white;
   font-size: 14px;
@@ -110,4 +111,72 @@ footer i {
   border: 1px solid white;
   border-radius: 50%;
   text-align: center;
+}
+
+/* Laptop design */
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem;
+    padding-bottom: 0
+  }
+  main {
+    width: ;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  main:nth-child(1) {
+    width: 50%;
+  }
+  main :nth-child(1) img {
+    margin-bottom: 0;
+    width: 600px;
+    margin-right: 2.5rem;
+  }
+
+  main :nth-child(2) h1 {
+    font-weight: 700;
+    display: block;
+    width: 60%;
+
+  }
+  main :nth-child(2) {
+    width: 500px;
+    height: max-content;
+    text-align: left;
+    margin-top: 5rem;
+  }
+
+  main :nth-child(2) p {
+    position: relative;
+    display: inline;
+}
+
+  input[type="button"] {
+    width: 12rem;
+    box-shadow: 0px 5px 8px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  input[type="button"]:active {
+    background-color: var(--Soft-Magenta);
+    color: white;
+  }
+
+  footer ul {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  i:active {
+    color: var(--Soft-Magenta);
+    border-color: var(--Soft-Magenta);
+  }
 }
